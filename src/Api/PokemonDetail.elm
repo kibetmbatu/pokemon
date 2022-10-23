@@ -19,7 +19,7 @@ get :
     -> Cmd msg
 get options =
     Http.get
-        { url = "http://localhost:5000/api/v2/pokemon/" ++ options.name
+        { url = "https://pokeapi.co/api/v2/pokemon/" ++ options.name
         , expect = Http.expectJson options.onResponse decoder
         }
 
